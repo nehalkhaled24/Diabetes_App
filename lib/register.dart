@@ -82,6 +82,9 @@ class RegisterScreen extends StatelessWidget {
                         if (text == null || text.trim().isEmpty) {
                           return 'please enter password';
                         }
+                        if (text.length < 6) {
+                          return 'password should be at least 6';
+                        }
                         return null;
                       },
                     ),
